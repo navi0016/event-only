@@ -1,1 +1,29 @@
-example@form page
+<h1>Application</h1>
+
+<form action="<%=example_form_path %> method="post">
+
+<%= form_for(@job_application) do |application| %>
+<p>
+<%= application.label :full_name %><br>
+<%= application.text_field :full_name %>
+</p>
+<p>
+<%= application.label :phone %><br>
+<%= application.telephone_field :phone %>
+</p>
+<p>
+<%= application.label :hobby %><br>
+<%= application.text_field :hobby %>
+</p>
+<%= application.label :years_experience %><br>
+<%= application.number_field :years_experience %>
+<p>
+<%= application.label :available_date %><br>
+<%= application.date_field :available_date %>
+</p>
+<p>
+<%= application.submit "Save" %>
+</p>
+<% end %>
+
+</form>
