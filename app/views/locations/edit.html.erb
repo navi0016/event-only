@@ -1,4 +1,4 @@
-<!-- 
+<!--
 <h1><%= @location.name %></h1>
 
 <div class="location">
@@ -11,3 +11,7 @@
 <h1><%= @location.name %></h1>
 
 <%= render 'single_location', location: @location %>
+
+<h1>Editing <%= link_to @location.name, location_path(@location) %></h1>
+
+<%= render 'location_form', location: @location %>
